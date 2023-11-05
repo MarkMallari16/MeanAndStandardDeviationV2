@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mean & Standard Deviation Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="calculator.png">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+
+<body>
+    <div class="spinner-container" id="spinner-container">
+        <div class="spinner"></div>
+    </div>
+    <section class="main hide-container" id="main">
+        <div class="container">
+            <div class="header">
+                <h1>Mean & Standard Deviation
+                    Calculator</h1>
+            </div>
+            <div class="wrapper">
+
+                <div class="input-fields">
+                    <div class="field">
+                        <label for="field">Enter Numbers with comma separated Minimum of 3 and Maximum of 10</label>
+                        <input type="text" placeholder="1,2,3,4,5,6" id="inputField">
+                    </div>
+                    <div class="button-container">
+                        <button class="button" onclick="calculate()">Calculate!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="result-container">
+                <h3 class="result-header">Formula:</h3>
+                <p id="meanFormula"></p>
+                <p id="standardDevFormula"></p>
+                <h3 class="result-header">Result: </h3>
+                <p>Mean: <span class="result-text" id="meanResult"></span></p>
+                <p>Standard Deviation: <span class="result-text" id="standardDevResult"></span></p>
+            </div>
+        </div>
+        </div>
+
+    </section>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

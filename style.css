@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;500;600&family=Poppins:wght@300;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent: #7076fe;
+    --background: #f9f9f9;
+    --text-color: #4b556b;
+    --secondary: #D1D1D1;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'poppins', sans-serif;
+}
+
+.main {
+    background: url(bg.png) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.wrapper,
+.result-container {
+    background-color: #FFF;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    border-radius: 4px;
+}
+
+.header {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    background-color: var(--background);
+
+    background: url(pattern.png) no-repeat;
+    background-size: cover;
+}
+
+.header h1 {
+    font-size: clamp(2.3rem, -0.875rem + 6vw, 2.5rem);
+    color: var(--background);
+}
+
+label {
+    font-size: clamp(0.9rem, 0.775rem + 0.4vw, 1rem);
+    font-weight: 300;
+    color: var(--text-color);
+    display: block;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 4px;
+    border: 2px solid #000;
+}
+
+input[type="text"]:focus {
+    border: 2px solid var(--accent);
+    outline: var(--accent);
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button {
+    margin-top: 12px;
+    padding: 12px 24px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 2px;
+
+}
+
+.result-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.result-header {
+    color: var(--text-color);
+}
+
+.result-container p{
+    color: var(--text-color);
+    font-family: 'poppins',sans-serif;
+}
+
+.result-text {
+    font-weight: 800;
+    background-image: linear-gradient(to right, #7076fe, #E355FE);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.show-result {
+    display: block;
+}
+
+.spinner-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.hide-container {
+    display: none;
+    
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    --c: radial-gradient(farthest-side, #7076fe 92%, #0000);
+    background: var(--c) 50% 0,
+        var(--c) 50% 100%,
+        var(--c) 100% 50%,
+        var(--c) 0 50%;
+    background-size: 13.4px 13.4px;
+    background-repeat: no-repeat;
+    animation: spinner-kh173p 1s infinite;
+}
+
+@keyframes spinner-kh173p {
+    to {
+        transform: rotate(.5turn);
+    }
+}
+@media screen and (max-width: 768px){
+    .container{
+        margin: 20px;
+    }
+}
